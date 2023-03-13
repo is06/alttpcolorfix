@@ -17,24 +17,7 @@
 #define IA16_PIXEL_SIZE 2
 #define IA8_PIXEL_SIZE 1
 
-typedef struct
-{
-    int width;
-    int height;
-    unsigned char* bytes;
-    int output_format;
-} bin_image_t;
-
 int check_arguments(int argc);
-int get_format_from_parameter(char* parameter);
-
-void convert_image(bin_image_t* image, int* output_pixel_size);
-void write_file(bin_image_t image, int output_pixel_size);
-
-unsigned short get_rgba16_color_from_rgba32(unsigned int rgba32);
-void convert_image_to_rgba16(bin_image_t* image);
-
-unsigned char get_ia8_color_from_ia16(unsigned short ia16);
-void convert_image_to_ia8(bin_image_t* image);
+png_color get_fixed_color(png_color color);
 
 #endif
