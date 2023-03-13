@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "png2n64.h"
+#include "alttpcolorfix.h"
 
 int main(int argc, char* argv[])
 {
